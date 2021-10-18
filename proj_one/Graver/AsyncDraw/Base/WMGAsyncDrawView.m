@@ -115,6 +115,9 @@ static BOOL _globalAsyncDrawDisabled = NO;
     return _drawingLayer.drawingCount;
 }
 
+
+
+
 - (dispatch_queue_t)drawQueue
 {
     if (self.dispatchDrawQueue)
@@ -124,6 +127,10 @@ static BOOL _globalAsyncDrawDisabled = NO;
     
     return dispatch_get_global_queue(self.dispatchPriority, 0);
 }
+
+
+
+
 
 - (void)setDispatchDrawQueue:(dispatch_queue_t)dispatchDrawQueue
 {
@@ -243,6 +250,15 @@ static BOOL _globalAsyncDrawDisabled = NO;
     [self.layer setNeedsDisplayInRect:rect];
 }
 
+
+//  [self setNeedsDisplay];
+
+// 唤起 displayLayer:
+
+// 调用的是
+
+// 他里面的
+
 - (void)displayLayer:(CALayer *)layer
 {
     if (!layer) return;
@@ -259,6 +275,11 @@ static BOOL _globalAsyncDrawDisabled = NO;
         [self drawingDidFinishAsynchronously:drawInBackground success:NO];
     }];
 }
+
+
+//  [self setNeedsDisplay];
+
+// 调用的是
 
 - (void)_displayLayer:(WMGAsyncDrawLayer *)layer
                  rect:(CGRect)rectToDraw
@@ -358,7 +379,7 @@ static BOOL _globalAsyncDrawDisabled = NO;
                             layer.opacity = 1.0;
                         } completion:NULL];
                     }
-                };
+                };      //      void (^finishBlock)(void)
                 
                 if (drawInBackground)
                 {
@@ -381,7 +402,7 @@ static BOOL _globalAsyncDrawDisabled = NO;
         
         UIGraphicsEndImageContext();
     };
-    
+    //  void (^drawBlock)(void)
     if (startCallback)
     {
         startCallback(drawInBackground);
@@ -394,7 +415,7 @@ static BOOL _globalAsyncDrawDisabled = NO;
         {
             layer.contents = nil;
         }
-        
+        // 子线程，绘制 UI 的 layer
         dispatch_async([self drawQueue], drawBlock);
     }
     else
@@ -414,9 +435,20 @@ static BOOL _globalAsyncDrawDisabled = NO;
         {
             // 不应当在其他线程，转到主线程绘制
             dispatch_async(dispatch_get_main_queue(), block);
+            
+            
         }
     }
 }
+
+
+
+
+
+
+
+
+
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
