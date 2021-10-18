@@ -259,8 +259,11 @@ static BOOL _globalAsyncDrawDisabled = NO;
 
 // 他里面的
 
-- (void)displayLayer:(CALayer *)layer
-{
+- (void)displayLayer:(CALayer *)layer{
+    
+// displayLayer:
+// CALayerDelegate 的方法
+    
     if (!layer) return;
     
     NSAssert([layer isKindOfClass:[WMGAsyncDrawLayer class]], @"WMGAsyncDrawingView can only display WMGAsyncDrawLayer");

@@ -74,3 +74,25 @@ WMGMixedView, 用以绘制 item
         dispatch_async([self drawQueue], drawBlock);
 
 ```
+
+
+
+<hr>
+
+<hr>
+<hr>
+
+
+<hr>
+
+<hr>
+<hr>
+
+
+
+drawRect:
+
+
+怎样被调用，很重要
+
+
