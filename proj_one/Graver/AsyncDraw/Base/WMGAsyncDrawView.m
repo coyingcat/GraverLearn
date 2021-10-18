@@ -202,8 +202,16 @@ static BOOL _globalAsyncDrawDisabled = NO;
 - (void)setNeedsDisplayAsync
 {
     self.contentsChangedAfterLastAsyncDrawing = YES;
+    
+    
+    // 标记，所在视图，需要更新。（ 不会立即更新 ）
+    
+    // 在下一个重新绘制的 run loop 周期中，进行绘制
+    
     [self setNeedsDisplay];
 }
+
+// 通过 time profile , 查看代码逻辑
 
 
 

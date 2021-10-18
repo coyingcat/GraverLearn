@@ -41,6 +41,10 @@ typedef void(^WMGAsyncDrawCallback)(BOOL drawInBackground);
 
 @interface WMGAsyncDrawView: UIView
 
+// 主要流程的绘制代码逻辑，在里面
+
+
+
 // 绘制完成后，内容经过此时间的渐变显示出来，默认为 0.0
 @property (nonatomic, assign) NSTimeInterval fadeDuration;
 
