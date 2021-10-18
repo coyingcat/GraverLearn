@@ -28,11 +28,39 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WMMutableAttributedItem : NSObject
 
+
+
+
+
+
+
+
+
+
 // 视觉元素对应的resultString
 @property (nonatomic, strong, readonly) NSAttributedString *resultString;
+// 相关文本
+
+
+
+
+
+
+
 
 // 视觉元素中涉及的文本组件
 @property (nonatomic, strong, readonly) NSArray <WMGTextAttachment *> *arrayAttachments;
+// 放置图片
+
+
+
+
+
+
+
+
+
+
 
 /**
  * 根据Text创建一个AttributedItem
