@@ -92,17 +92,38 @@ NSString * const WMGMixedViewTextVerticalAlignmentKey = @"waimai-graver-mixedvie
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 - (void)setAttributedItem:(WMMutableAttributedItem *)attributedItem
 {
     if (_attributedItem != attributedItem)
     {
         _attributedItem = attributedItem;
         
+        // 异步的操作
+        // 用来渲染 / 绘制
         [self setNeedsDisplayAsync];
         
         _pendingAttachmentUpdates = YES;
     }
 }
+
+
+
+
+
+
+
+
 
 - (void)setNumerOfLines:(NSUInteger)numerOfLines
 {

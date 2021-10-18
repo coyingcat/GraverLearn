@@ -20,11 +20,26 @@
     
 
 #import <UIKit/UIKit.h>
+
+
+
+
+
+
+
 #import "WMGAsyncDrawLayer.h"
 
 typedef void(^WMGAsyncDrawCallback)(BOOL drawInBackground);
 
-@interface WMGAsyncDrawView : UIView
+
+
+
+
+
+
+// 负责，绘制视图
+
+@interface WMGAsyncDrawView: UIView
 
 // 绘制完成后，内容经过此时间的渐变显示出来，默认为 0.0
 @property (nonatomic, assign) NSTimeInterval fadeDuration;

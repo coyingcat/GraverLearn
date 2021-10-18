@@ -192,11 +192,25 @@ static BOOL _globalAsyncDrawDisabled = NO;
     [self displayLayer:self.layer];
 }
 
+
+
+
+
+
+
+
 - (void)setNeedsDisplayAsync
 {
     self.contentsChangedAfterLastAsyncDrawing = YES;
     [self setNeedsDisplay];
 }
+
+
+
+
+
+
+
 
 - (void)drawRect:(CGRect)rect
 {

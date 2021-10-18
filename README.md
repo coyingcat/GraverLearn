@@ -14,3 +14,6 @@ WMMutableAttributedItem,  视图绘制单元
 
 
 
+
+
+WMGMixedView, 用以绘制 item
