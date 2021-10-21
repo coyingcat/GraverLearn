@@ -15,6 +15,7 @@
 		26C018FE27218A1300D199FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C018FC27218A1300D199FE /* LaunchScreen.storyboard */; };
 		26C0190627218A3C00D199FE /* CustomLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0190527218A3C00D199FE /* CustomLayer.swift */; };
 		26C0190827218AF200D199FE /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C0190727218AF200D199FE /* CustomView.swift */; };
+		26C0190A2721A74E00D199FE /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C019092721A74E00D199FE /* StateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		26C018FF27218A1300D199FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26C0190527218A3C00D199FE /* CustomLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayer.swift; sourceTree = "<group>"; };
 		26C0190727218AF200D199FE /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		26C019092721A74E00D199FE /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				26C018FF27218A1300D199FE /* Info.plist */,
 				26C0190527218A3C00D199FE /* CustomLayer.swift */,
 				26C0190727218AF200D199FE /* CustomView.swift */,
+				26C019092721A74E00D199FE /* StateView.swift */,
 			);
 			path = LayerThing;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C0190A2721A74E00D199FE /* StateView.swift in Sources */,
 				26C0190827218AF200D199FE /* CustomView.swift in Sources */,
 				26C0190627218A3C00D199FE /* CustomLayer.swift in Sources */,
 				26C018F627218A1100D199FE /* ViewController.swift in Sources */,
