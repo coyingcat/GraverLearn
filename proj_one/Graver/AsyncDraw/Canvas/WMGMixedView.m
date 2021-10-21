@@ -38,7 +38,7 @@ NSString * const WMGMixedViewAttributedItemKey  = @"waimai-graver-mixedview-attr
 NSString * const WMGMixedViewTextHorizontalAlignmentKey = @"waimai-graver-mixedview-horizontalalignment-key";
 NSString * const WMGMixedViewTextVerticalAlignmentKey = @"waimai-graver-mixedview-verticalalignment-key";
 
-@interface WMGMixedView ()<WMGTextDrawerDelegate, WMGTextDrawerEventDelegate, WMGTextLayoutDelegate>
+@interface WMGMixedView()<WMGTextDrawerDelegate, WMGTextDrawerEventDelegate, WMGTextLayoutDelegate>
 {
     BOOL _pendingAttachmentUpdates;
 }
@@ -156,6 +156,17 @@ NSString * const WMGMixedViewTextVerticalAlignmentKey = @"waimai-graver-mixedvie
     
     return userInfo;
 }
+
+
+
+
+
+
+
+
+
+// WMGMixedView 中，一系列绘制任务，的操作
+
 
 - (BOOL)drawInRect:(CGRect)rect withContext:(CGContextRef)context asynchronously:(BOOL)asynchronously userInfo:(NSDictionary *)userInfo
 {
