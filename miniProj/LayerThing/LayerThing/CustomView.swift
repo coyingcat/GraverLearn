@@ -37,6 +37,9 @@ class CustomView: UIView {
 
 extension CustomView: CustomLayerDelegate{
     
+    // 自定义绘制， 关键方法
+    
+    
     func display(custom layer: CALayer) {
         guard let img = UIGraphicsGetImageFromCurrentImageContext() else {  return  }
         layer.contents = img.cgImage
