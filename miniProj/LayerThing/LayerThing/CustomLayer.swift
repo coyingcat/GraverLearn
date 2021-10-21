@@ -16,6 +16,7 @@ protocol CustomLayerDelegate: AnyObject{
 
     func layoutSublayersOf(custom layer: CALayer)
     
+    func layerWillDrawCustom() -> CGContext?
 }
 
 
@@ -36,7 +37,13 @@ class CustomLayer: CALayer {
     override func display() {
         
         // 询问代理 ( UIView ) 来绘制
-        
+        if let proxy = delegate as? CustomLayerDelegate, let ctx = proxy.layerWillDrawCustom(){
+            
+            
+            
+            
+            
+        }
         
         
         
@@ -55,7 +62,15 @@ class CustomLayer: CALayer {
     
     // 调用起来
     override func layoutSublayers() {
-        super.layoutSublayers()
+       // super.layoutSublayers()       // 断点               // bt
+        
+        if let proxy = delegate as? CustomLayerDelegate{
+           
+            
+            
+            
+        }
+        
         
         
         

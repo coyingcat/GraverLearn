@@ -35,5 +35,36 @@ class CustomView: UIView {
 
 
 
-
+extension CustomView: CustomLayerDelegate{
+    
+    func display(custom layer: CALayer) {
+        
+    }
+    
+    
+    func draw(custom layer: CALayer, in ctx: CGContext) {
+        
+        
+        
+    }
+    
+    
+    func layoutSublayersOf(custom layer: CALayer) {
+        layoutSubviews()
+    }
+    
+    
+    
+    
+    
+    func layerWillDrawCustom() -> CGContext? {
+        
+        UIGraphicsBeginImageContextWithOptions(bounds.size, layer.isOpaque, layer.contentsScale)
+        guard let ctx = UIGraphicsGetCurrentContext() else{ return nil }
+        
+        
+        return ctx
+    }
+    
+}
 
