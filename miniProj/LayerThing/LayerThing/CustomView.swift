@@ -26,6 +26,10 @@ class CustomView: UIView {
     }
     
     
+    
+    override class var layerClass: AnyClass{
+        return CustomLayer.self
+    }
 }
 
 

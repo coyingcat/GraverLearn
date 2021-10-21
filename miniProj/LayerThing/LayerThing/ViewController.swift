@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    lazy var v = CustomView(frame: CGRect(x: 150, y: 150, width: 100, height: 100))
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        v.backgroundColor = UIColor.yellow
+        view.addSubview(v)
+        
+        
     }
 
 
