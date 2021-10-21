@@ -57,15 +57,32 @@
     return text;
 }
 
+
+
+
+
+
+
+
+
 - (id)initWithText:(NSString *)text
 {
     self = [super init];
     if (self) {
+        
+        
+        // 保存，当前的文本信息
+        
+        
+        
         _textStorage = [[NSMutableAttributedString alloc] initWithString:!IsStrEmpty(text) ? text : @""];
         [_textStorage wmg_setFont:[UIFont systemFontOfSize:11]];
         [_textStorage wmg_setColor:WMGHEXCOLOR(0x666666)];
         
         _resultString = nil;
+        
+        // 附件， 通过 Core Text
+        
         _arrayAttachments = [NSMutableArray array];
         
         _flags.needsRebuild = YES;
@@ -144,6 +161,13 @@
     
     return [self appendAttachment:att];
 }
+
+
+
+
+
+// 保存到附件信息当中，供下一次的绘制流
+
 
 - (WMMutableAttributedItem *)appendImageWithUrl:(NSString *)imgUrl placeholder:(NSString *)placeholder
 {
