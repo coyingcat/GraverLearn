@@ -43,6 +43,18 @@ extension CustomView: CustomLayerDelegate{
     
     
     func draw(custom layer: CALayer, in ctx: CGContext) {
+        // A
+        // draw(bounds.size)
+        // 这是一种
+        
+        //
+        //
+        //
+        
+        UIColor.red.set()
+        let path = UIBezierPath(rect: CGRect(x: (bounds.size.width - 60)/2, y: (bounds.size.height - 60)/2, width: 60, height: 60))
+        ctx.addPath(path.cgPath)
+        ctx.fillPath()
         
         
         

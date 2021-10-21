@@ -37,11 +37,12 @@ class CustomLayer: CALayer {
     override func display() {
         
         // 询问代理 ( UIView ) 来绘制
+        
+        //  delegate 是 UIView
         if let proxy = delegate as? CustomLayerDelegate, let ctx = proxy.layerWillDrawCustom(){
             
-            
-            
-            
+            proxy.draw(custom: self, in: ctx)
+            proxy.display(custom: self)
             
         }
         
