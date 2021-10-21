@@ -95,7 +95,14 @@
 
 - (void)basicUseDemo
 {
+    
+    
+    //  WMMutableAttributedItem， 视图绘制单元，自己拼接
+    
+    
+    
     WMMutableAttributedItem *item = [WMMutableAttributedItem itemWithText:@""];
+    
     
     WMMutableAttributedItem *text1 = [WMMutableAttributedItem itemWithText:@"Graver是一种高效的UI渲染框架。"];
     [text1 setFont:[UIFont systemFontOfSize:18]];

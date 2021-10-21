@@ -166,7 +166,10 @@
 
 
 
-// 保存到附件信息当中，供下一次的绘制流
+
+// 保存到附件信息当中，供下一次的绘制流程的操作
+
+
 
 
 - (WMMutableAttributedItem *)appendImageWithUrl:(NSString *)imgUrl placeholder:(NSString *)placeholder

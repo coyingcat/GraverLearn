@@ -21,6 +21,15 @@
 
 #import "WMGCanvasView.h"
 
+
+
+
+
+// 做事件的响应
+
+
+
+
 @interface WMGCanvasControl : WMGCanvasView
 
 // how to position content vertically inside control. default is center
