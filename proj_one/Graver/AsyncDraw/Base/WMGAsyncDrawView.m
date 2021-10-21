@@ -259,7 +259,9 @@ static BOOL _globalAsyncDrawDisabled = NO;
 
 // 他里面的
 
-- (void)displayLayer:(CALayer *)layer{
+
+- (void)displayLayer:(CALayer *)layer{              //  从这个方法，来接管的
+
     
 // displayLayer:
 // CALayerDelegate 的方法
@@ -297,6 +299,15 @@ static BOOL _globalAsyncDrawDisabled = NO;
     NSUInteger targetDrawingCount = layer.drawingCount;
     
     NSDictionary *drawingUserInfo = [self currentDrawingUserInfo];
+    
+    
+    
+    // 定义绘制任务
+    
+    
+    // 将绘图的压力，从 CPU , 转移到 GPU , hehe
+    
+    // CPU 的事情，还是 CPU 来干，当然是远离主线程，在异步线程中处理的
     
     void (^drawBlock)(void) = ^{
         
