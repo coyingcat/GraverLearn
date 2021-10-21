@@ -367,13 +367,24 @@ static BOOL _globalAsyncDrawDisabled = NO;
             if (!context) {
                 WMGLog(@"may be memory warning");
             }
+            // 当前调用栈，的保存
+            // 保存当前的堆栈信息
             
+            
+            // 把当前的绘图上下文，放入栈里面
             CGContextSaveGState(context);
             
             if (rectToDraw.origin.x || rectToDraw.origin.y)
             {
+                
+                
+                // 坐标，转换
                 CGContextTranslateCTM(context, rectToDraw.origin.x, -rectToDraw.origin.y);
             }
+            
+            
+            
+            
             
             if (layer.drawingCount != targetDrawingCount)
             {
@@ -420,14 +431,16 @@ static BOOL _globalAsyncDrawDisabled = NO;
                         return;
                     }
                     
+                    // 赋值的操作
+                    
                     layer.contents = (id)image.CGImage;
                     
                     [layer setContentsChangedAfterLastAsyncDrawing:NO];
                     [layer setReserveContentsBeforeNextDrawingComplete:NO];
-                    if (finishCallback)
-                    {
+                    if (finishCallback){
                         finishCallback(drawInBackground);
                     }
+                    
                     
                     // 如果当前是异步绘制，且设置了有效fadeDuration，则执行动画
                     if (drawInBackground && layer.fadeDuration > 0.0001)
