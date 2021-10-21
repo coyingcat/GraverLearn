@@ -306,7 +306,12 @@ static BOOL _globalAsyncDrawDisabled = NO;
 {
     BOOL drawInBackground = layer.isAsyncDrawsCurrentContent && ![[self class] globalAsyncDrawingDisabled];
     
-    [layer increaseDrawingCount];
+    [layer increaseDrawingCount];           //  计数器
+    //      是为了，标识当前的绘制任务
+    
+    
+    
+    
     
     NSUInteger targetDrawingCount = layer.drawingCount;
     
@@ -330,11 +335,24 @@ static BOOL _globalAsyncDrawDisabled = NO;
             }
         };
         
+        
+        // 判断，任务是否取消
+        
+        
+        
+        // 通过查看，当前的计数器，和我们目标的计数器，
+        // 是否一致
         if (layer.drawingCount != targetDrawingCount)
         {
+            
+            // 如果不一致，则是进入了，下一个的绘制任务
+            
             failedBlock();
             return;
         }
+        
+        
+        
         
         CGSize contextSize = layer.bounds.size;
         BOOL contextSizeValid = contextSize.width >= 1 && contextSize.height >= 1;

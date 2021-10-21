@@ -23,10 +23,21 @@
 
 @implementation WMGAsyncDrawLayer
 
+
+
+
+// 通过取模运算，做标记
+
+
+
 - (void)increaseDrawingCount
 {
     _drawingCount = (_drawingCount + 1) % 10000;
 }
+
+
+
+
 
 - (void)setNeedsDisplay
 {
