@@ -7,7 +7,44 @@
 
 import UIKit
 
+protocol CustomLayerDelegate: AnyObject{
+    
+
+    func display(custom layer: CALayer)
+
+    func draw(custom layer: CALayer, in ctx: CGContext)
+
+    func layoutSublayersOf(custom layer: CALayer)
+    
+}
+
+
+
+
+
+
+
 class CustomLayer: CALayer {
+    
+    
+    
+    
+    
+    // 进行图层的绘制
+    
+    
+    override func display() {
+        
+        // 询问代理 ( UIView ) 来绘制
+        
+        
+        
+        
+        
+    }
+    
+    
+    
     
     
     
