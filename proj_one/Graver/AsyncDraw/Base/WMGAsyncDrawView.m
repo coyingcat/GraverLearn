@@ -368,11 +368,21 @@ static BOOL _globalAsyncDrawDisabled = NO;
                 
                 // 放在子类，去完成
                 
+                // 通过继承的方式，实现绘制任务
+                
                 drawingFinished = [self drawInRect:rectToDraw withContext:context asynchronously:drawInBackground userInfo:drawingUserInfo];
+                
+                // 父类，没有具体的绘制任务
+                // 父类的基本行为， drawingFinished  为  YES
+                
+                
+                // 具体的绘制任务，交给子类, 去重载
             }
             
             CGContextRestoreGState(context);
         }
+        
+        
         
         // 所有耗时的操作都已完成，但仅在绘制过程中未发生重绘时，将结果显示出来
         if (drawingFinished && targetDrawingCount == layer.drawingCount)
