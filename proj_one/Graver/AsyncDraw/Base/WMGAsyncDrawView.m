@@ -240,10 +240,22 @@ static BOOL _globalAsyncDrawDisabled = NO;
     [self drawingDidFinishAsynchronously:NO success:YES];
 }
 
+
+
+
+
 - (void)setNeedsDisplay
 {
+    // 第一步的绘制流程，标记更新
+    
     [self.layer setNeedsDisplay];
 }
+
+
+
+
+
+
 
 - (void)setNeedsDisplayInRect:(CGRect)rect
 {
@@ -351,6 +363,11 @@ static BOOL _globalAsyncDrawDisabled = NO;
             }
             else
             {
+                
+                // 具体的绘制流程，
+                
+                // 放在子类，去完成
+                
                 drawingFinished = [self drawInRect:rectToDraw withContext:context asynchronously:drawInBackground userInfo:drawingUserInfo];
             }
             
