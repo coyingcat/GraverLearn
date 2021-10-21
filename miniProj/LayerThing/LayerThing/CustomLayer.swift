@@ -17,6 +17,8 @@ protocol CustomLayerDelegate: AnyObject{
     func layoutSublayersOf(custom layer: CALayer)
     
     func layerWillDrawCustom() -> CGContext?
+    
+    func drawFinished()
 }
 
 
@@ -43,7 +45,7 @@ class CustomLayer: CALayer {
             
             proxy.draw(custom: self, in: ctx)
             proxy.display(custom: self)
-            
+            proxy.drawFinished()
         }
         
         

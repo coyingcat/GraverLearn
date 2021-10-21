@@ -38,7 +38,8 @@ class CustomView: UIView {
 extension CustomView: CustomLayerDelegate{
     
     func display(custom layer: CALayer) {
-        
+        guard let img = UIGraphicsGetImageFromCurrentImageContext() else {  return  }
+        layer.contents = img.cgImage
     }
     
     
@@ -78,5 +79,10 @@ extension CustomView: CustomLayerDelegate{
         return ctx
     }
     
+    
+    
+    func drawFinished(){
+        UIGraphicsEndImageContext()
+    }
 }
 
