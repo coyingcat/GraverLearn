@@ -244,25 +244,7 @@ NSString * const WMGMixedViewTextVerticalAlignmentKey = @"waimai-graver-mixedvie
 }
 
 - (void)drawingDidFinishAsynchronously:(BOOL)asynchronously success:(BOOL)success
-{
-    if (!success) {
-        return;
-    }
-    
-    [_lock lock];
-    // 三个点： 锁重入、for循环遍历移除元素、多线程同步访问共享数据区
-    for (__block int i = 0; i < _arrayAttachments.count; i++) {
-        if (i >= 0) {
-            WMGTextAttachment *att = [_arrayAttachments objectAtIndex:i];
-            
-            if (att.type == WMGAttachmentTypeStaticImage){
-                WMGImage *gImage = (WMGImage *)att.contents;
-                if ([gImage isKindOfClass:[WMGImage class]]) {}
-            }
-        }
-    }
-    [_lock unlock];
-}
+{}
 
 #pragma mark - Event Handling
 
