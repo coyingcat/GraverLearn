@@ -131,6 +131,9 @@ extern NSString * const WMGTextAttachmentAttributeName;
     
     interrupt_if_needed;
     
+    
+    // WMGTextLayoutFrame, 基于 CTFrameRef
+    
     WMGTextLayoutFrame *layoutFrame = [textLayout.layoutFrame copy];
     
     if (!layoutFrame) {

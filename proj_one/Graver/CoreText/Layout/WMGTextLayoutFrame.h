@@ -28,7 +28,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WMGTextLayoutFrame : NSObject<NSCopying, NSMutableCopying>
+
+// 封装 CTFrameRef
+@interface WMGTextLayoutFrame: NSObject<NSCopying, NSMutableCopying>
 
 @property (nonatomic, strong, readonly, nullable) NSArray <WMGTextLayoutLine *> *arrayLines;
 @property (nonatomic, assign, readonly) CGSize layoutSize;
