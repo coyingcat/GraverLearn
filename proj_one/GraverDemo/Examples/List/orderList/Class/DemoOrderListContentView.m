@@ -13,6 +13,11 @@
 
 @interface DemoOrderListContentView ()
 @property (nonatomic, strong) NSMutableArray <WMGTextAttachment *> * arrayAttachments;
+
+
+// 同一个线程，可能不断的进来
+
+
 @property (nonatomic, strong) NSRecursiveLock * lock;
 @property (nonatomic, strong) WMGTextDrawer * textDrawer;
 @end
@@ -111,6 +116,8 @@
                 if ([ctImage isKindOfClass:[WMGImage class]]) {
                     
                     __weak typeof(self) weakSelf = self;
+                    
+                    // 封装 SDWebImage
                     [ctImage wmg_loadImageWithUrl:ctImage.downloadUrl options:0 progress:NULL completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                         
                         if (weakSelf) {
@@ -118,6 +125,8 @@
                             if ([self.arrayAttachments containsObject:att]) {
                                 [self.arrayAttachments removeObject:att];
                                 i--;
+                                
+                                // 完成了， 当前网络图片的替换
                                 [self setNeedsDisplay];
                             }
                             [self.lock unlock];
