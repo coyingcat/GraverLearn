@@ -42,7 +42,9 @@ extension CustomView: CustomLayerDelegate{
     
     func display(custom layer: CALayer) {
         guard let img = UIGraphicsGetImageFromCurrentImageContext() else {  return  }
-        layer.contents = img.cgImage
+        DispatchQueue.main.async {
+            self.layer.contents = img.cgImage
+        }
     }
     
     
@@ -56,7 +58,7 @@ extension CustomView: CustomLayerDelegate{
         //
         
         UIColor.red.set()
-        let path = UIBezierPath(rect: CGRect(x: (bounds.size.width - 60)/2, y: (bounds.size.height - 60)/2, width: 60, height: 60))
+        let path = UIBezierPath(rect: CGRect(x: (layer.bb.width - 60)/2, y: (layer.bb.height - 60)/2, width: 60, height: 60))
         ctx.addPath(path.cgPath)
         ctx.fillPath()
         
@@ -72,13 +74,9 @@ extension CustomView: CustomLayerDelegate{
     
     
     
-    
-    func layerWillDrawCustom() -> CGContext? {
-        
-        UIGraphicsBeginImageContextWithOptions(bounds.size, layer.isOpaque, layer.contentsScale)
+    func layerWillDraw(custom layer: CALayer) -> CGContext? {
+        UIGraphicsBeginImageContextWithOptions(layer.bb, layer.isOpaque, layer.contentsScale)
         guard let ctx = UIGraphicsGetCurrentContext() else{ return nil }
-        
-        
         return ctx
     }
     

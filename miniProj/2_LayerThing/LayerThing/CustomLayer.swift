@@ -16,7 +16,7 @@ protocol CustomLayerDelegate: AnyObject{
 
     func layoutSublayersOf(custom layer: CALayer)
     
-    func layerWillDrawCustom() -> CGContext?
+    func layerWillDraw(custom layer: CALayer) -> CGContext?
     
     func drawFinished()
 }
@@ -43,7 +43,7 @@ class CustomLayer: CALayer {
         //  delegate 是 UIView
         
         DispatchQueue.global(qos: .userInitiated).async {
-            if let proxy = self.delegate as? CustomLayerDelegate, let ctx = proxy.layerWillDrawCustom(){
+            if let proxy = self.delegate as? CustomLayerDelegate, let ctx = proxy.layerWillDraw(custom: self){
                 
                 proxy.drawing(custom: self, in: ctx)
                 proxy.display(custom: self)
@@ -119,4 +119,13 @@ class CustomLayer: CALayer {
      */
     
 
+}
+
+
+
+
+extension CALayer{
+    var bb: CGSize{
+        bounds.size
+    }
 }
