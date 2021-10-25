@@ -15,8 +15,12 @@ class ViewController: UIViewController {
         UIScreen.main.bounds.size
     }
     
+    var wid: CGFloat{
+        return min(500, size.width - 60)
+    }
     
-    lazy var v = StateView(frame: CGRect(x: (size.width - 500) / 2, y: (size.height - 500) / 2, width: 500, height: 500))
+    
+    lazy var v = StateView(frame: CGRect(x: (size.width - wid) / 2, y: (size.height - wid) / 2, width: wid, height: wid))
     
     
     override func viewDidLoad() {

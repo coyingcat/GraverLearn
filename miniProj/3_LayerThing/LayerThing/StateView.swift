@@ -16,32 +16,16 @@ class StateView: UIView {
         // Drawing code
         
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
-        
-        UIColor.red.setStroke()
-        
-        //
-        
-        //
-        ctx.saveGState()
-        
-        ctx.addEllipse(in: CGRect(x: 140, y: 170, width: 50, height: 50))
-        ctx.setLineWidth(3)
-        UIColor.purple.setStroke()
-        ctx.strokePath()
-        
-        
-        //
-        //
-        ctx.restoreGState()
-        
-        ctx.addEllipse(in: CGRect(x: 140, y: 300, width: 50, height: 50))
-        ctx.setLineWidth(3)
-        
-        ctx.strokePath()
-        
-        
-        
-        
+        ctx.textMatrix = CGAffineTransform.identity
+        ctx.translateBy(x: 0, y: bounds.size.height)
+        ctx.scaleBy(x: 1, y: -1)
+        let path = CGPath(rect: bounds, transform: nil)
+        let raw = "赵客缦胡缨"
+        let font = UIFont.systemFont(ofSize: 30)
+        let attributedStr = NSAttributedString(string: raw, attributes: [.foregroundColor : UIColor.yellow, .font: font])
+        let frameSetter = CTFramesetterCreateWithAttributedString(attributedStr)
+        let frame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), path, nil)
+        CTFrameDraw(frame, ctx)
     }
     
 
