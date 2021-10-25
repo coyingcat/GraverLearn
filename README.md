@@ -101,3 +101,26 @@ drawRect:
 怎样被调用，很重要
 
 
+
+
+
+<hr>
+
+
+<hr>
+
+
+<hr>
+
+
+
+
+修改 Frame / 更新 UI
+
+
+
+<hr>
+
+
+此时，UIView / CALayer,
+标记为，待处理
