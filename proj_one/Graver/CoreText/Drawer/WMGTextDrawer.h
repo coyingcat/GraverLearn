@@ -37,9 +37,12 @@
 typedef BOOL (^WMGTextDrawerShouldInterruptBlock)(void);
 
 /*
- 文本绘制器类是框架核心类，混排图文的绘制、size计算都依赖文本绘制器实现
+ 文本绘制器类是框架核心类，混排图文的绘制、size 计算都依赖文本绘制器实现
  */
-@interface WMGTextDrawer : UIResponder
+
+
+// 核心的绘制函数
+@interface WMGTextDrawer: UIResponder
 
 // 文本绘制器的绘制起点和绘制区域的定义，Frame会被拆解成两部分，origin决定绘制起点，size决定绘制区域大小
 @property (nonatomic, assign) CGRect frame;
