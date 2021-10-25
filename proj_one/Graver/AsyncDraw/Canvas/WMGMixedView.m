@@ -42,7 +42,20 @@ NSString * const WMGMixedViewTextVerticalAlignmentKey = @"waimai-graver-mixedvie
 {
     BOOL _pendingAttachmentUpdates;
 }
+
+
+
+
+
+
+// 递归锁，可重入
+
+
+
 @property (nonatomic, strong) NSRecursiveLock *lock;
+
+
+
 @property (nonatomic, strong) WMGTextDrawer *textDrawer;
 @property (nonatomic, strong) NSMutableArray <WMGTextAttachment *> *arrayAttachments;
 @end
