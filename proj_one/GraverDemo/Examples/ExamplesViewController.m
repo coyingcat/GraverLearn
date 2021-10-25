@@ -47,8 +47,6 @@ typedef NS_ENUM(NSInteger, GraverDemoListRow) {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title =  @"Examples";
-    
-    _dataSource = [NSMutableArray array];
     _dataSource = @[@[@"基本使用", @"高级使用", @"文本计算", @"图片相关"], @[@"外卖商家列表", @"外卖订单列表"]];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height)];
