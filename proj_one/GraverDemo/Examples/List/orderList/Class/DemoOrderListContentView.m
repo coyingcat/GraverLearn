@@ -98,6 +98,13 @@
     return YES;
 }
 
+
+
+
+
+
+// 绘制文本，完成之后
+// 再搞，网络图片
 - (void)drawingDidFinishAsynchronously:(BOOL)asynchronously success:(BOOL)success
 {
     if (!success) {

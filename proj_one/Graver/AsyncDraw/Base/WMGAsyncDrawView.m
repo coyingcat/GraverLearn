@@ -494,6 +494,17 @@ static BOOL _globalAsyncDrawDisabled = NO;
     {
         void (^block)(void) = ^{
             @autoreleasepool {
+                
+                /*
+                            大量的循环，
+                    
+                            大量的绘制任务，
+                 
+                            使用 autoreleasepool， 包裹我们的绘制任务
+                 
+                        */
+                
+                
                 drawBlock();
             }
         };
