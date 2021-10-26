@@ -493,6 +493,9 @@ static BOOL _globalAsyncDrawDisabled = NO;
     else
     {
         void (^block)(void) = ^{
+            
+            // 自定制绘制的时候， 使用
+            
             @autoreleasepool {
                 
                 /*
@@ -501,6 +504,9 @@ static BOOL _globalAsyncDrawDisabled = NO;
                             大量的绘制任务，
                  
                             使用 autoreleasepool， 包裹我们的绘制任务
+                 
+                            对内存，及时的回收
+                 
                  
                         */
                 
