@@ -25,11 +25,11 @@ class ViewController: UIViewController {
     @IBAction func clickBtn(_ sender: UIButton){
         
         
+        // hitTest:
         
+        // pointInside:
         
-        
-        
-        
+        // 找到事件的，最佳响应者
     }
     
     
@@ -65,7 +65,21 @@ class ViewController: UIViewController {
      frame #9: 0x000000018b66cd38 UIKitCore`__dispatchPreprocessedEventFromEventQueue + 956
      frame #10: 0x000000018b67174c UIKitCore`__processEventQueue + 6684
      frame #11: 0x000000018b668b4c UIKitCore`__eventFetcherSourceCallback + 160
+ 
+ 
+ 
+ 
+ 
+ 
+ 
      frame #12: 0x0000000188b4d07c CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+     
+     捕捉到，当前 source 0 的触摸事件
+     
+     source 0， 主线程，事件分发
+ 
+ 
+ 
      frame #13: 0x0000000188b4cf78 CoreFoundation`__CFRunLoopDoSource0 + 208
      frame #14: 0x0000000188b4c27c CoreFoundation`__CFRunLoopDoSources0 + 268
      frame #15: 0x0000000188b4625c CoreFoundation`__CFRunLoopRun + 820
