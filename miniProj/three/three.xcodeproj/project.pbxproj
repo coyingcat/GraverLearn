@@ -14,6 +14,7 @@
 		26DEE1362727E2B3002909FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEE1352727E2B3002909FF /* Assets.xcassets */; };
 		26DEE1392727E2B3002909FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DEE1372727E2B3002909FF /* LaunchScreen.storyboard */; };
 		26DEE13C2727E2B3002909FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DEE13B2727E2B3002909FF /* main.m */; };
+		26DEE1442727E36A002909FF /* UIWindow+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DEE1432727E36A002909FF /* UIWindow+Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		26DEE1382727E2B3002909FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26DEE13A2727E2B3002909FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26DEE13B2727E2B3002909FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26DEE1422727E36A002909FF /* UIWindow+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Event.h"; sourceTree = "<group>"; };
+		26DEE1432727E36A002909FF /* UIWindow+Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Event.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				26DEE1372727E2B3002909FF /* LaunchScreen.storyboard */,
 				26DEE13A2727E2B3002909FF /* Info.plist */,
 				26DEE13B2727E2B3002909FF /* main.m */,
+				26DEE1422727E36A002909FF /* UIWindow+Event.h */,
+				26DEE1432727E36A002909FF /* UIWindow+Event.m */,
 			);
 			path = three;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DEE1442727E36A002909FF /* UIWindow+Event.m in Sources */,
 				26DEE1312727E2B1002909FF /* ViewController.m in Sources */,
 				26DEE12B2727E2B1002909FF /* AppDelegate.m in Sources */,
 				26DEE13C2727E2B3002909FF /* main.m in Sources */,
