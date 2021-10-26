@@ -16,7 +16,7 @@ extension UIWindow{
     // 重写，就是拦截
     func sendEvent(_ event: UIEvent){
         
-        
+        // 无效
         
     }
     

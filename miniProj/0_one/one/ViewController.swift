@@ -9,18 +9,51 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    var ss: CGSize{
+        return UIScreen.main.bounds.size
+    }
+    
     lazy var v = CustomView(frame: CGRect(x: 50, y: 50, width: 200, height: 200))
 
-    override func viewDidLoad() {
+    
+    
+    lazy var btn = UIButton(frame: CGRect(x: ss.width - 100, y: ss.height - 100, width: 100, height: 100))
+    
+    
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
         
         
         view.addSubview(v)
+        
+        view.addSubview(btn)
+        //
+        
+        btn.backgroundColor = UIColor.yellow
+        
+        //
+        btn.addTarget(self, action: #selector(ViewController.oneBtn), for: .touchUpInside)
+        
+        //
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(ViewController.twoTap))
+        btn.addGestureRecognizer(tap)
+     //
     }
 
 
     
+    @objc func oneBtn(){
+        print("\(#function)")
+    }
     
+    
+    // tap, 优先级， 更高
+    @objc func twoTap(){
+        print("\(#function)")
+    }
     
     @IBAction func clickBtn(_ sender: UIButton){
         
