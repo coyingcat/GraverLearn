@@ -26,6 +26,8 @@
 @end
 
 @implementation WMGListTextView
+// 并不是，最终的事件处理者
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -60,6 +62,11 @@
 }
 
 
+
+
+
+
+
 - (BOOL)drawInRect:(CGRect)rect withContext:(CGContextRef)context asynchronously:(BOOL)asynchronously userInfo:(NSDictionary *)userInfo
 {
     [super drawInRect:rect withContext:context asynchronously:asynchronously userInfo:userInfo];
@@ -69,6 +76,8 @@
         return YES;
     }
     __weak typeof(self)weakSelf = self;
+    
+    
     [self.drawerDates enumerateObjectsUsingBlock:^(WMGVisionObject * _Nonnull drawerData, NSUInteger idx, BOOL * _Nonnull stop) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         strongSelf.textDrawer.frame = drawerData.frame;
@@ -80,6 +89,13 @@
     }];
     return YES;
 }
+
+
+
+
+
+
+
 
 - (void)drawingDidFinishAsynchronously:(BOOL)asynchronously success:(BOOL)success
 {
@@ -180,10 +196,15 @@
     
     __weak typeof(self)weakSelf = self;
     //self.drawerDates : 模型
+    
+    
+    // 遍历，当前点击的坐标
     [self.drawerDates enumerateObjectsUsingBlock:^(WMGVisionObject * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
         CGRect frame = obj.frame;
-        if (CGRectContainsPoint(frame, location)) {
+        if (CGRectContainsPoint(frame, location)){
+            
+            // 保存点击的信息
             strongSelf.clickItem = obj.value;
             strongSelf.textDrawer.frame = frame;
             strongSelf.textDrawer.textLayout.attributedString = [obj.value resultString];
