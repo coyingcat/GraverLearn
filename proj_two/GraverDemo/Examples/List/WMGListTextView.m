@@ -270,6 +270,9 @@
 
 
 
+// 最终的，事件调用
+
+
 - (void)textDrawer:(WMGTextDrawer *)textDrawer didPressActiveRange:(id<WMGActiveRange>)activeRange
 {
     if (activeRange.type == WMGActiveRangeTypeAttachment) {
@@ -286,7 +289,9 @@
     return YES;
 }
 
-//Control  ： 不会分发事件了！
+
+
+// 原本的 Control  ： 不会分发事件了！
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     return NO;

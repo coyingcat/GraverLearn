@@ -132,12 +132,14 @@
 {
     UITouch *touch = [touches anyObject];
     _touchInside = YES;
+    
+    // 是否要，追踪事件
+    
     _tracking = [self beginTrackingWithTouch:touch withEvent:event];
     
     self.highlighted = YES;
     
-    if (_tracking)
-    {
+    if (_tracking){
         UIControlEvents currentEvents = UIControlEventTouchDown;
         
         if (touch.tapCount > 1) {
@@ -303,6 +305,12 @@
     return allEvents;
 }
 
+
+
+
+
+// 伪， 私有方法
+
 - (void)_sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event
 {
     for(__WMGCanvasControlTargetAction *t in [self _targetActions])
@@ -322,10 +330,20 @@
     [self _sendActionsForControlEvents:controlEvents withEvent:nil];
 }
 
+
+
+
+
 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
+    //  UIApplication， 分发事件
+    
     [[UIApplication sharedApplication] sendAction:action to:target from:self forEvent:event];
 }
+
+
+
+
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
