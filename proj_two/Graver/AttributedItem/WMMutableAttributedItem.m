@@ -432,12 +432,12 @@
     }
 }
 
-- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
+- (void)addTargetX:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
 {
-    [self addTarget:target action:action forControlEvents:controlEvents priority:0];
+    [self addTargetY:target action:action forControlEvents:controlEvents priority:0];
 }
 
-- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents priority:(NSInteger)priority
+- (void)addTargetY:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents priority:(NSInteger)priority
 {
     if (target && action && [target respondsToSelector:action]) {
         [self.arrayAttachments enumerateObjectsUsingBlock:^(WMGTextAttachment * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

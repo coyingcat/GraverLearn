@@ -59,7 +59,7 @@
     // 给商家名称添加点击事件
     [name_title setUserInfo:poi.name];
     // 模型组成 ViewModel
-    [name_title addTarget:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
+    [name_title addTargetX:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
     
     size = [name_title.resultString wmg_sizeConstrainedToWidth:(spaceXEnd - spaceXStart) numberOfLines:1];
     cellData.nameObj.frame = CGRectMake(spaceXStart, spaceYStart, size.width, size.height);

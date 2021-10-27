@@ -127,10 +127,10 @@
         [buttonListAttributedItem appendWhiteSpaceWithWidth:10];
         
         [buttonAttributedItem setUserInfo:buttonInfo.title];
-        [buttonAttributedItem addTarget:self.owner action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+        [buttonAttributedItem addTargetX:self.owner action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     [buttonListAttributedItem setUserInfo:@"按钮空白" priority:1];
-    [buttonListAttributedItem addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside priority:1];
+    [buttonListAttributedItem addTargetY:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside priority:1];
     CGSize buttonListSize = [buttonListAttributedItem.resultString wmg_size];
     
     WMGVisionObject * buttonListObject = [[WMGVisionObject alloc] init];

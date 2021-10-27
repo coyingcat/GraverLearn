@@ -339,7 +339,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param controlEvents 事件类型
  *
  */
-- (void)addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
+- (void)addTargetX:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
 /**
  *  给一个文本组件添加事件
@@ -349,7 +349,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param controlEvents 事件类型
  * @param priority 相应事件的优先级,数字越小优先级约高
  */
-- (void)addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents priority:(NSInteger)priority;
+- (void)addTargetY:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents priority:(NSInteger)priority;
 
 /**
  *  给一个文本组件添加点击回调
