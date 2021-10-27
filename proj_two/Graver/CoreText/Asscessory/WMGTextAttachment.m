@@ -92,16 +92,26 @@ NSString * const WMGTextAttachmentReplacementCharacter = @"\uFFFC";
     [_callBacks addObject:callBack];
 }
 
-- (void)handleEvent:(id)sender
-{
+
+
+
+
+
+- (void)handleEvent:(id)sender{
+    
+    
     if (_target && _selector) {
         if ([_target respondsToSelector:_selector]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            
+            // 执行方法
             [_target performSelector:_selector withObject:sender];
 #pragma clang diagnostic pop
         }
     }
+    
+    
     if (_callBacks.count) {
         for (void (^callBack)(void) in _callBacks) {
             if (callBack) {
@@ -110,6 +120,12 @@ NSString * const WMGTextAttachmentReplacementCharacter = @"\uFFFC";
         }
     }
 }
+
+
+
+
+
+
 
 @end
 

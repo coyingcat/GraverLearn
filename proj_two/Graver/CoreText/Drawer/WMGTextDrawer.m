@@ -426,6 +426,9 @@ extern NSString * const WMGTextAttachmentAttributeName;
     return nil;
 }
 
+
+
+
 - (void)eventDelegateDidPressActiveRange:(id<WMGActiveRange>)activeRange
 {
     if (_eventDelegateHas.didPressActiveRange) {

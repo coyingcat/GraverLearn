@@ -213,13 +213,16 @@
     // _textDrawer : Core Text
     [_textDrawer touchesBegan:touches withEvent:event];
     
-
-    if (!_textDrawer.pressingActiveRange)
-    {
-        //调用父类进行事件的传递
+    // 这里，有一个标识
+    if (!_textDrawer.pressingActiveRange){
+        // 如果，不可被点击
+        // 调用父类进行事件的传递
         [super touchesBegan:touches withEvent:event];
     }
 }
+
+
+
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -263,6 +266,10 @@
     return arrayActiveRanges;
 }
 
+
+
+
+
 - (void)textDrawer:(WMGTextDrawer *)textDrawer didPressActiveRange:(id<WMGActiveRange>)activeRange
 {
     if (activeRange.type == WMGActiveRangeTypeAttachment) {
@@ -271,6 +278,8 @@
         [att handleEvent:att.userInfo];
     }
 }
+
+
 
 - (BOOL)textDrawer:(WMGTextDrawer *)textDrawer shouldInteractWithActiveRange:(id<WMGActiveRange>)activeRange
 {

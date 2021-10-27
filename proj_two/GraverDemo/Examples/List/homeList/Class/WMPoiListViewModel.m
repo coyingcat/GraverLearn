@@ -52,18 +52,18 @@
     spaceXStart += 8;
     
     // 商家名称
-    WMMutableAttributedItem *name = [WMMutableAttributedItem itemWithText:poi.name];
-    [name setFont:[UIFont systemFontOfSize:16]];
-    [name setColor:WMGHEXCOLOR(0x33312D)];
+    WMMutableAttributedItem *name_title = [WMMutableAttributedItem itemWithText:poi.name];
+    [name_title setFont:[UIFont systemFontOfSize:16]];
+    [name_title setColor:WMGHEXCOLOR(0x33312D)];
     
     // 给商家名称添加点击事件
-    [name setUserInfo:poi.name];
-    //模型组成 ViewModel
-    [name addTarget:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
+    [name_title setUserInfo:poi.name];
+    // 模型组成 ViewModel
+    [name_title addTarget:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
     
-    size = [name.resultString wmg_sizeConstrainedToWidth:(spaceXEnd - spaceXStart) numberOfLines:1];
+    size = [name_title.resultString wmg_sizeConstrainedToWidth:(spaceXEnd - spaceXStart) numberOfLines:1];
     cellData.nameObj.frame = CGRectMake(spaceXStart, spaceYStart, size.width, size.height);
-    cellData.nameObj.value = name;
+    cellData.nameObj.value = name_title;
     spaceYStart += size.height;
     
     // 仅预定
