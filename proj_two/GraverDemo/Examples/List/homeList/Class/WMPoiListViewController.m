@@ -95,7 +95,7 @@
 
 
 #pragma mark - 点击回调
-- (void)titleDidClick:(NSString *)title {
+- (void)titleDidClick_ctrl:(NSString *)title {
     NSLog(@"点击了店铺 %@ 的标题",title);
 }
 

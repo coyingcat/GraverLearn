@@ -59,7 +59,7 @@
     // 给商家名称添加点击事件
     [name setUserInfo:poi.name];
     //模型组成 ViewModel
-    [name addTarget:self action:@selector(titleDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    [name addTarget:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
     
     size = [name.resultString wmg_sizeConstrainedToWidth:(spaceXEnd - spaceXStart) numberOfLines:1];
     cellData.nameObj.frame = CGRectMake(spaceXStart, spaceYStart, size.width, size.height);
@@ -264,9 +264,9 @@
     }
 }
 
-- (void)titleDidClick:(id)userInfo {
-    if ([self.owner respondsToSelector:@selector(titleDidClick:)]) {
-        [self.owner performSelector:@selector(titleDidClick:) withObject:userInfo];
+- (void)titleDidClick_title:(id)userInfo {
+    if ([self.owner respondsToSelector:@selector(titleDidClick_ctrl:)]) {
+        [self.owner performSelector:@selector(titleDidClick_ctrl:) withObject:userInfo];
     }
 }
 
