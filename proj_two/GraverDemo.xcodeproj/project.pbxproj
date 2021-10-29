@@ -209,9 +209,9 @@
 		26B811A3272BF68100E67039 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26B811A6272BF68100E67039 /* WMGListTextView.h */,
 				26B811A4272BF68100E67039 /* WMGListTextView.m */,
 				26B811A5272BF68100E67039 /* WMPoiListCell.h */,
-				26B811A6272BF68100E67039 /* WMGListTextView.h */,
 				26B811A7272BF68100E67039 /* WMPoiListCell.m */,
 			);
 			path = View;
@@ -832,7 +832,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meituan.waimai.GraverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -852,7 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meituan.waimai.GraverDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

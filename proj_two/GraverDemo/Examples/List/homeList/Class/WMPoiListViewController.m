@@ -119,7 +119,12 @@
     NSLog(@"点击了店铺 %@ 的标题",title);
 }
 
+
+
+
+
 - (void)tagDidClick:(WMPoiListCellData *)cellData {
+    NSLog(@"点击了店铺 %@ 的 tag     _    _", cellData.name);
     if (![cellData canShowAllTag]) {
         return;
     }

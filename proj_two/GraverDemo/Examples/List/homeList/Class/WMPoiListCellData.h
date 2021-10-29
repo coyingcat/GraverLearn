@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL showAllTag;
 @property (nonatomic, assign) BOOL canShowAllTag;
 
+@property (nonatomic, copy) NSString *name;
+
 @property (nonatomic, strong) WMGVisionObject *logoObj;
 @property (nonatomic, strong) WMGVisionObject *logoIconObj;
 @property (nonatomic, strong) WMGVisionObject *nameObj;

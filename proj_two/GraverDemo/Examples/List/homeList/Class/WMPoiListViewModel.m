@@ -57,7 +57,7 @@
     [name_title setColor:WMGHEXCOLOR(0x33312D)];
     
     // 给商家名称添加点击事件
-    [name_title setUserInfo:poi.name];
+    [name_title setUserInfo: poi.name];
     // 模型组成 ViewModel
     [name_title addTargetX:self action:@selector(titleDidClick_title:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -239,6 +239,17 @@
     
     CGSize allSize = [tags.resultString wmg_sizeConstrainedToWidth:tagMaxWidth numberOfLines:0];
     CGSize onelineSize = [tags.resultString wmg_sizeConstrainedToWidth:tagMaxWidth numberOfLines:1];
+    
+    
+    //
+    
+    //
+    
+    cellData.name = poi.name;
+    //
+    
+    //
+    
     if (allSize.height > onelineSize.height) {
         cellData.canShowAllTag = YES;
         // 下拉箭头
@@ -263,6 +274,9 @@
         [self.owner performSelector:@selector(tagDidClick:) withObject:userInfo];
     }
 }
+
+
+
 
 - (void)titleDidClick_title:(id)userInfo {
     if ([self.owner respondsToSelector:@selector(titleDidClick_ctrl:)]) {
