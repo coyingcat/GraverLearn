@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B811A0272BE62E00E67039 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119A272BE62E00E67039 /* YYWeakProxy.m */; };
+		26B811A1272BE62E00E67039 /* NSAttributedString+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119C272BE62E00E67039 /* NSAttributedString+YYText.m */; };
+		26B811A2272BE62E00E67039 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119D272BE62E00E67039 /* YYFPSLabel.m */; };
 		2C1E5CB5226D713600D475E1 /* WMGListTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1E5CB4226D713600D475E1 /* WMGListTextView.m */; };
 		2C930ADE21B7AA560087E086 /* poi.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C930AD721B7AA550087E086 /* poi.json */; };
 		2C930ADF21B7AA560087E086 /* icon_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C930AD821B7AA550087E086 /* icon_star@2x.png */; };
@@ -37,7 +40,6 @@
 		DD16297321B14086008A951E /* ExamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD16297221B14086008A951E /* ExamplesViewController.m */; };
 		DD16297C21B14470008A951E /* BasicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD16297B21B14470008A951E /* BasicDetailViewController.m */; };
 		DD669FAB21AFB5A200E9C7D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD669FAA21AFB5A200E9C7D5 /* AppDelegate.m */; };
-		DD669FAE21AFB5A200E9C7D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD669FAD21AFB5A200E9C7D5 /* ViewController.m */; };
 		DD669FB121AFB5A200E9C7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD669FAF21AFB5A200E9C7D5 /* Main.storyboard */; };
 		DD669FB321AFB5A300E9C7D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD669FB221AFB5A300E9C7D5 /* Assets.xcassets */; };
 		DD669FB621AFB5A300E9C7D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD669FB421AFB5A300E9C7D5 /* LaunchScreen.storyboard */; };
@@ -74,6 +76,12 @@
 
 /* Begin PBXFileReference section */
 		1537B55946C63FDB2597DEC2 /* Pods-GraverDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraverDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraverDemoTests/Pods-GraverDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		26B8119A272BE62E00E67039 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		26B8119B272BE62E00E67039 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		26B8119C272BE62E00E67039 /* NSAttributedString+YYText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+YYText.m"; sourceTree = "<group>"; };
+		26B8119D272BE62E00E67039 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		26B8119E272BE62E00E67039 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		26B8119F272BE62E00E67039 /* NSAttributedString+YYText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+YYText.h"; sourceTree = "<group>"; };
 		2C1E5CB3226D713600D475E1 /* WMGListTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGListTextView.h; sourceTree = "<group>"; };
 		2C1E5CB4226D713600D475E1 /* WMGListTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGListTextView.m; sourceTree = "<group>"; };
 		2C930AD721B7AA550087E086 /* poi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poi.json; sourceTree = "<group>"; };
@@ -126,8 +134,6 @@
 		DD669FA621AFB5A200E9C7D5 /* GraverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD669FA921AFB5A200E9C7D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD669FAA21AFB5A200E9C7D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DD669FAC21AFB5A200E9C7D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DD669FAD21AFB5A200E9C7D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DD669FB021AFB5A200E9C7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD669FB221AFB5A300E9C7D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD669FB521AFB5A300E9C7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -192,6 +198,19 @@
 			children = (
 			);
 			path = testList;
+			sourceTree = "<group>";
+		};
+		26B81199272BE62E00E67039 /* yy */ = {
+			isa = PBXGroup;
+			children = (
+				26B8119A272BE62E00E67039 /* YYWeakProxy.m */,
+				26B8119B272BE62E00E67039 /* YYFPSLabel.h */,
+				26B8119C272BE62E00E67039 /* NSAttributedString+YYText.m */,
+				26B8119D272BE62E00E67039 /* YYFPSLabel.m */,
+				26B8119E272BE62E00E67039 /* YYWeakProxy.h */,
+				26B8119F272BE62E00E67039 /* NSAttributedString+YYText.h */,
+			);
+			path = yy;
 			sourceTree = "<group>";
 		};
 		2C930AD421B7AA230087E086 /* homeList */ = {
@@ -292,6 +311,7 @@
 		DD16297021B14050008A951E /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				26B81199272BE62E00E67039 /* yy */,
 				DD16297121B14086008A951E /* ExamplesViewController.h */,
 				DD16297221B14086008A951E /* ExamplesViewController.m */,
 				DD16297E21B145BB008A951E /* List */,
@@ -354,8 +374,6 @@
 				DD16297021B14050008A951E /* Examples */,
 				DD669FA921AFB5A200E9C7D5 /* AppDelegate.h */,
 				DD669FAA21AFB5A200E9C7D5 /* AppDelegate.m */,
-				DD669FAC21AFB5A200E9C7D5 /* ViewController.h */,
-				DD669FAD21AFB5A200E9C7D5 /* ViewController.m */,
 				DD669FAF21AFB5A200E9C7D5 /* Main.storyboard */,
 				DD669FB221AFB5A300E9C7D5 /* Assets.xcassets */,
 				DD669FB421AFB5A300E9C7D5 /* LaunchScreen.storyboard */,
@@ -608,7 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C930B1121B7B8240087E086 /* WMPoiListAttributedImage.m in Sources */,
-				DD669FAE21AFB5A200E9C7D5 /* ViewController.m in Sources */,
+				26B811A0272BE62E00E67039 /* YYWeakProxy.m in Sources */,
 				83206B0221B6579500A46AAB /* DemoOrderModel.m in Sources */,
 				83206B0C21B7968100A46AAB /* DemoOrderListEngine.m in Sources */,
 				83206B0921B792E000A46AAB /* DemoOrderListViewModel.m in Sources */,
@@ -616,6 +634,7 @@
 				2C930B0221B7B4990087E086 /* WMPoiListEngine.m in Sources */,
 				DD16297321B14086008A951E /* ExamplesViewController.m in Sources */,
 				2C930B0521B7B4DD0087E086 /* WMPoiListModel.m in Sources */,
+				26B811A1272BE62E00E67039 /* NSAttributedString+YYText.m in Sources */,
 				2C930B0E21B7B6490087E086 /* WMPoiListViewController.m in Sources */,
 				DD16297C21B14470008A951E /* BasicDetailViewController.m in Sources */,
 				2C930AF521B7AA720087E086 /* WMPoiListViewModel.m in Sources */,
@@ -623,6 +642,7 @@
 				DD669FB921AFB5A300E9C7D5 /* main.m in Sources */,
 				EC25D79E21E43334002E5168 /* WMGImage+queryCache.m in Sources */,
 				2C930B0821B7B5720087E086 /* WMPoiListCell.m in Sources */,
+				26B811A2272BE62E00E67039 /* YYFPSLabel.m in Sources */,
 				83206B0121B6579500A46AAB /* DemoOrderCellData.m in Sources */,
 				EC25D7A121E436F5002E5168 /* WMMutableAttributedItem+fixPlaceholder.m in Sources */,
 				83206AFF21B6579500A46AAB /* DemoOrderListViewController.m in Sources */,
