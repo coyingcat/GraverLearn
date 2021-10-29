@@ -21,10 +21,6 @@
     NSTimeInterval _lastTime;
     UIFont *_font;
     UIFont *_subFont;
-    
-    NSTimeInterval _llll;
-    
-    NSInteger _minNum;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -32,16 +28,17 @@
         frame.size = kSize;
     }
     self = [super initWithFrame:frame];
-    _minNum = 100;
+
     self.layer.cornerRadius = 5;
     self.clipsToBounds = YES;
     self.textAlignment = NSTextAlignmentCenter;
     self.userInteractionEnabled = NO;
     self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
-    
-    _font = [UIFont fontWithName:@"Menlo" size:14];
+    CGFloat size = 14;
+    size = 24;
+    _font = [UIFont fontWithName:@"Menlo" size:size];
     if (_font) {
-        _subFont = [UIFont fontWithName:@"Menlo" size:4];
+        _subFont = [UIFont fontWithName:@"Menlo" size: size];
     } else {
         _font = [UIFont fontWithName:@"Courier" size:14];
         _subFont = [UIFont fontWithName:@"Courier" size:4];
@@ -75,11 +72,8 @@
     
     CGFloat progress = fps / 60.0;
     UIColor *color = [UIColor colorWithHue:0.27 * (progress - 0.2) saturation:1 brightness:0.9 alpha:1];
-    
-    
-    self->_minNum = MIN(self->_minNum , (int)round(fps));
-    
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld FPS", self->_minNum ]];
+  
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d FPS",  (int)round(fps)]];
     [text setColor:color range:NSMakeRange(0, text.length - 3)];
     [text setColor:[UIColor whiteColor] range:NSMakeRange(text.length - 3, 3)];
     text.font = _font;
@@ -89,7 +83,4 @@
 }
 
 
-- (void) reset{
-    self->_minNum = 100;
-}
 @end

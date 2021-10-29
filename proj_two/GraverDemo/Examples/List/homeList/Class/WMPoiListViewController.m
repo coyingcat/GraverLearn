@@ -13,10 +13,18 @@
 #import "WMPoiListEngine.h"
 
 
+
+
+#import "YYFPSLabel.h"
+
+
 @interface WMPoiListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView * tableview;
 @property (nonatomic, strong) WMGBaseViewModel *viewModel;
+
+
+@property (nonatomic, strong) YYFPSLabel * label;
 
 @end
 
@@ -24,9 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     [self.navigationController setTitle:@"商家列表"];
     [self.view addSubview:self.tableview];
-    
+    [self fpsDo];
     
     _viewModel = [[WMPoiListViewModel alloc] init];
     _viewModel.engine = [[WMPoiListEngine alloc] init];
@@ -38,6 +49,9 @@
             [weakSelf.tableview reloadData];
         }
     }];
+    
+    
+    
 }
 
 - (UITableView *)tableview
@@ -114,5 +128,18 @@
     [_tableview reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 
 }
+
+
+
+
+
+
+- (void)fpsDo{
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    CGFloat edge = 60;
+    self.label = [[YYFPSLabel alloc] initWithFrame: CGRectMake(edge, 20 + 160 , bounds.size.width - edge * 2, 80)];
+    [self.view addSubview: self.label];
+}
+
 
 @end

@@ -193,22 +193,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		016A94CA23361E5D00296590 /* testList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = testList;
-			sourceTree = "<group>";
-		};
 		26B81199272BE62E00E67039 /* yy */ = {
 			isa = PBXGroup;
 			children = (
-				26B8119A272BE62E00E67039 /* YYWeakProxy.m */,
-				26B8119B272BE62E00E67039 /* YYFPSLabel.h */,
+				26B8119F272BE62E00E67039 /* NSAttributedString+YYText.h */,
 				26B8119C272BE62E00E67039 /* NSAttributedString+YYText.m */,
+				26B8119B272BE62E00E67039 /* YYFPSLabel.h */,
 				26B8119D272BE62E00E67039 /* YYFPSLabel.m */,
 				26B8119E272BE62E00E67039 /* YYWeakProxy.h */,
-				26B8119F272BE62E00E67039 /* NSAttributedString+YYText.h */,
+				26B8119A272BE62E00E67039 /* YYWeakProxy.m */,
 			);
 			path = yy;
 			sourceTree = "<group>";
@@ -333,7 +326,6 @@
 		DD16297E21B145BB008A951E /* List */ = {
 			isa = PBXGroup;
 			children = (
-				016A94CA23361E5D00296590 /* testList */,
 				2C1E5CB3226D713600D475E1 /* WMGListTextView.h */,
 				2C1E5CB4226D713600D475E1 /* WMGListTextView.m */,
 				EC25D79C21E43334002E5168 /* WMGImage+queryCache.h */,

@@ -34,7 +34,9 @@
     }];
     
     [self.resultSet reset];
-    [self.resultSet addItems:result];
+    for (int i = 0; i < 6; i++) {
+        [self.resultSet addItems:result];
+    }
     
     _loadState = WMGEngineLoadStateLoaded;
     if (completion) {
