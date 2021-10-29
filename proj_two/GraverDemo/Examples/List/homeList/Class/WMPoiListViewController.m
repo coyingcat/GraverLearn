@@ -92,7 +92,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     else{
-        NSLog(@" gg gg gg  11111 ");
+      //  NSLog(@" gg gg gg  11111 ");
     }
     cell.delegate = self;
     [cell setupCellData:cellData];
@@ -101,7 +101,7 @@
         cell = [[WMGBaseCell alloc] init];
     }
     else{
-        NSLog(@" gg gg gg  0000 ");
+     //   NSLog(@" gg gg gg  0000 ");
     }
     
     return cell;
@@ -123,7 +123,7 @@
 
 
 
-- (void)tagDidClick:(WMPoiListCellData *)cellData {
+- (void)tagDidClick_ctrl:(WMPoiListCellData *)cellData {
     NSLog(@"点击了店铺 %@ 的 tag     _    _", cellData.name);
     if (![cellData canShowAllTag]) {
         return;

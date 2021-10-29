@@ -230,7 +230,7 @@
     
     // block形式回调点击事件
     [tags registerClickBlock:^{
-        [self tagDidClick:cellData];
+        [self tagDidClick_tag: cellData];
     }];
     
     WMGTextParagraphStyle *style = [WMGTextParagraphStyle defaultParagraphStyle];
@@ -269,9 +269,9 @@
     return cellData;
 }
 
-- (void)tagDidClick:(id)userInfo {
-    if ([self.owner respondsToSelector:@selector(tagDidClick:)]) {
-        [self.owner performSelector:@selector(tagDidClick:) withObject:userInfo];
+- (void)tagDidClick_tag:(id)userInfo {
+    if ([self.owner respondsToSelector:@selector(tagDidClick_ctrl:)]) {
+        [self.owner performSelector:@selector(tagDidClick_ctrl:) withObject:userInfo];
     }
 }
 
