@@ -47,8 +47,17 @@
     // override to subclass
 }
 
+
+
+
+//
+
+// 抽象程度较高， 就是逻辑重复
+
 - (void)addItem:(WMGBusinessModel *)item{
     // 如果抽象程度较高，父类统一处理，否则子类覆盖
+    
+    //
 }
 
 - (void)insertItem:(WMGBusinessModel *)item atIndex:(NSUInteger)index{

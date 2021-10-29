@@ -88,7 +88,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)insertDataWithParams:(nullable NSDictionary *)params withIndex:(NSUInteger)insertIndex completion:(nullable WMGEngineLoadCompletion)completion;
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
 // 对数据的增删改查
+
+// 数据操作
+
 @interface WMGBaseEngine (DataOperation)
 
 /**
