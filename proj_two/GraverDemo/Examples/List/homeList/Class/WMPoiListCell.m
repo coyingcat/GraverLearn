@@ -10,8 +10,21 @@
 #import "WMGListTextView.h"
 
 @interface WMPoiListCell ()
-@property (nonatomic, strong) WMGListTextView *drawView;  //AsyncView
+
+@property (nonatomic, strong) WMGListTextView *drawView;  // 继承了 AsyncView
+
 @end
+
+
+
+
+
+
+
+
+
+
+
 
 @implementation WMPoiListCell
 
@@ -26,15 +39,36 @@
 
 - (void)setupCellData:(WMPoiListCellData *)cellData {
     [super setupCellData:cellData];
-    //WMGListTextView
+    
+    
+    
+    // WMGListTextView
     _drawView.frame = CGRectMake(0, 0, cellData.cellWidth, cellData.cellHeight);
+    
+    // 拿数据，去渲染
     _drawView.drawerDates = cellData.mutableAttributedTexts;
+    
     [_drawView addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
 }
+
+
+
+
+
+
+
+
+
 
 - (void)test{
     NSLog(@"view 点击了");
 }
+
+
+
+
+
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"cell touchBegan");
@@ -50,3 +84,9 @@
 }
 
 @end
+
+
+
+
+
+
