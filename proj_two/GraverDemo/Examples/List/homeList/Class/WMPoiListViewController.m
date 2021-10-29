@@ -91,11 +91,17 @@
         cell = [(WMGBaseCell *)[cellData.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass(cellData.cellClass)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    else{
+        NSLog(@" gg gg gg  11111 ");
+    }
     cell.delegate = self;
     [cell setupCellData:cellData];
     
     if (!cell) {
         cell = [[WMGBaseCell alloc] init];
+    }
+    else{
+        NSLog(@" gg gg gg  0000 ");
     }
     
     return cell;

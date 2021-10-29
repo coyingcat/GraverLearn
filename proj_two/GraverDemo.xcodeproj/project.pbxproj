@@ -10,7 +10,8 @@
 		26B811A0272BE62E00E67039 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119A272BE62E00E67039 /* YYWeakProxy.m */; };
 		26B811A1272BE62E00E67039 /* NSAttributedString+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119C272BE62E00E67039 /* NSAttributedString+YYText.m */; };
 		26B811A2272BE62E00E67039 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B8119D272BE62E00E67039 /* YYFPSLabel.m */; };
-		2C1E5CB5226D713600D475E1 /* WMGListTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1E5CB4226D713600D475E1 /* WMGListTextView.m */; };
+		26B811A8272BF68100E67039 /* WMGListTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B811A4272BF68100E67039 /* WMGListTextView.m */; };
+		26B811A9272BF68100E67039 /* WMPoiListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B811A7272BF68100E67039 /* WMPoiListCell.m */; };
 		2C930ADE21B7AA560087E086 /* poi.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C930AD721B7AA550087E086 /* poi.json */; };
 		2C930ADF21B7AA560087E086 /* icon_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C930AD821B7AA550087E086 /* icon_star@2x.png */; };
 		2C930AE021B7AA560087E086 /* icon_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C930AD921B7AA550087E086 /* icon_up@2x.png */; };
@@ -21,7 +22,6 @@
 		2C930AF521B7AA720087E086 /* WMPoiListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930AE721B7AA710087E086 /* WMPoiListViewModel.m */; };
 		2C930B0221B7B4990087E086 /* WMPoiListEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B0021B7B4980087E086 /* WMPoiListEngine.m */; };
 		2C930B0521B7B4DD0087E086 /* WMPoiListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B0421B7B4DD0087E086 /* WMPoiListModel.m */; };
-		2C930B0821B7B5720087E086 /* WMPoiListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B0621B7B5720087E086 /* WMPoiListCell.m */; };
 		2C930B0B21B7B5B20087E086 /* WMPoiListCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B0921B7B5B20087E086 /* WMPoiListCellData.m */; };
 		2C930B0E21B7B6490087E086 /* WMPoiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B0D21B7B6490087E086 /* WMPoiListViewController.m */; };
 		2C930B1121B7B8240087E086 /* WMPoiListAttributedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C930B1021B7B8240087E086 /* WMPoiListAttributedImage.m */; };
@@ -82,8 +82,10 @@
 		26B8119D272BE62E00E67039 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		26B8119E272BE62E00E67039 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		26B8119F272BE62E00E67039 /* NSAttributedString+YYText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+YYText.h"; sourceTree = "<group>"; };
-		2C1E5CB3226D713600D475E1 /* WMGListTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGListTextView.h; sourceTree = "<group>"; };
-		2C1E5CB4226D713600D475E1 /* WMGListTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGListTextView.m; sourceTree = "<group>"; };
+		26B811A4272BF68100E67039 /* WMGListTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGListTextView.m; sourceTree = "<group>"; };
+		26B811A5272BF68100E67039 /* WMPoiListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListCell.h; sourceTree = "<group>"; };
+		26B811A6272BF68100E67039 /* WMGListTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGListTextView.h; sourceTree = "<group>"; };
+		26B811A7272BF68100E67039 /* WMPoiListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPoiListCell.m; sourceTree = "<group>"; };
 		2C930AD721B7AA550087E086 /* poi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poi.json; sourceTree = "<group>"; };
 		2C930AD821B7AA550087E086 /* icon_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star@2x.png"; sourceTree = "<group>"; };
 		2C930AD921B7AA550087E086 /* icon_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_up@2x.png"; sourceTree = "<group>"; };
@@ -97,8 +99,6 @@
 		2C930B0121B7B4990087E086 /* WMPoiListEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListEngine.h; sourceTree = "<group>"; };
 		2C930B0321B7B4DC0087E086 /* WMPoiListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListModel.h; sourceTree = "<group>"; };
 		2C930B0421B7B4DD0087E086 /* WMPoiListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPoiListModel.m; sourceTree = "<group>"; };
-		2C930B0621B7B5720087E086 /* WMPoiListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPoiListCell.m; sourceTree = "<group>"; };
-		2C930B0721B7B5720087E086 /* WMPoiListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListCell.h; sourceTree = "<group>"; };
 		2C930B0921B7B5B20087E086 /* WMPoiListCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPoiListCellData.m; sourceTree = "<group>"; };
 		2C930B0A21B7B5B20087E086 /* WMPoiListCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListCellData.h; sourceTree = "<group>"; };
 		2C930B0C21B7B6490087E086 /* WMPoiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPoiListViewController.h; sourceTree = "<group>"; };
@@ -206,9 +206,21 @@
 			path = yy;
 			sourceTree = "<group>";
 		};
+		26B811A3272BF68100E67039 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26B811A4272BF68100E67039 /* WMGListTextView.m */,
+				26B811A5272BF68100E67039 /* WMPoiListCell.h */,
+				26B811A6272BF68100E67039 /* WMGListTextView.h */,
+				26B811A7272BF68100E67039 /* WMPoiListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2C930AD421B7AA230087E086 /* homeList */ = {
 			isa = PBXGroup;
 			children = (
+				26B811A3272BF68100E67039 /* View */,
 				2C930AD621B7AA2F0087E086 /* Resource */,
 				2C930AD521B7AA290087E086 /* Class */,
 			);
@@ -224,8 +236,6 @@
 				2C930B1021B7B8240087E086 /* WMPoiListAttributedImage.m */,
 				2C930B0A21B7B5B20087E086 /* WMPoiListCellData.h */,
 				2C930B0921B7B5B20087E086 /* WMPoiListCellData.m */,
-				2C930B0721B7B5720087E086 /* WMPoiListCell.h */,
-				2C930B0621B7B5720087E086 /* WMPoiListCell.m */,
 				2C930AE921B7AA720087E086 /* WMPoiListViewModel.h */,
 				2C930AE721B7AA710087E086 /* WMPoiListViewModel.m */,
 				2C930B0321B7B4DC0087E086 /* WMPoiListModel.h */,
@@ -326,8 +336,6 @@
 		DD16297E21B145BB008A951E /* List */ = {
 			isa = PBXGroup;
 			children = (
-				2C1E5CB3226D713600D475E1 /* WMGListTextView.h */,
-				2C1E5CB4226D713600D475E1 /* WMGListTextView.m */,
 				EC25D79C21E43334002E5168 /* WMGImage+queryCache.h */,
 				EC25D79D21E43334002E5168 /* WMGImage+queryCache.m */,
 				EC25D79F21E436F5002E5168 /* WMMutableAttributedItem+fixPlaceholder.h */,
@@ -617,9 +625,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B811A9272BF68100E67039 /* WMPoiListCell.m in Sources */,
 				2C930B1121B7B8240087E086 /* WMPoiListAttributedImage.m in Sources */,
 				26B811A0272BE62E00E67039 /* YYWeakProxy.m in Sources */,
 				83206B0221B6579500A46AAB /* DemoOrderModel.m in Sources */,
+				26B811A8272BF68100E67039 /* WMGListTextView.m in Sources */,
 				83206B0C21B7968100A46AAB /* DemoOrderListEngine.m in Sources */,
 				83206B0921B792E000A46AAB /* DemoOrderListViewModel.m in Sources */,
 				83206B0521B6579500A46AAB /* DemoOrderListCell.m in Sources */,
@@ -633,12 +643,10 @@
 				2C930B0B21B7B5B20087E086 /* WMPoiListCellData.m in Sources */,
 				DD669FB921AFB5A300E9C7D5 /* main.m in Sources */,
 				EC25D79E21E43334002E5168 /* WMGImage+queryCache.m in Sources */,
-				2C930B0821B7B5720087E086 /* WMPoiListCell.m in Sources */,
 				26B811A2272BE62E00E67039 /* YYFPSLabel.m in Sources */,
 				83206B0121B6579500A46AAB /* DemoOrderCellData.m in Sources */,
 				EC25D7A121E436F5002E5168 /* WMMutableAttributedItem+fixPlaceholder.m in Sources */,
 				83206AFF21B6579500A46AAB /* DemoOrderListViewController.m in Sources */,
-				2C1E5CB5226D713600D475E1 /* WMGListTextView.m in Sources */,
 				DD669FAB21AFB5A200E9C7D5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,6 +39,9 @@
         [self.contentView addSubview:_separatorLine];
         
         self.contentView.backgroundColor = [UIColor clearColor];
+        
+        
+        // 有意思
         self.accessibilityIdentifier = NSStringFromClass([self class]);
     }
     return self;
