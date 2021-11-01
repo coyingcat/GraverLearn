@@ -237,6 +237,9 @@
     [style setLineSpacing:6];
     [tags setTextParagraphStyle:style fontSize:11];
     
+    
+    
+    // 直接，算出来
     CGSize allSize = [tags.resultString wmg_sizeConstrainedToWidth:tagMaxWidth numberOfLines:0];
     CGSize onelineSize = [tags.resultString wmg_sizeConstrainedToWidth:tagMaxWidth numberOfLines:1];
     
