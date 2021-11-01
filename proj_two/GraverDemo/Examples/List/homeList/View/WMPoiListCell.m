@@ -47,7 +47,7 @@
     
     // 拿数据，去渲染
     _drawView.drawerDates = cellData.mutableAttributedTexts;
-    
+    // 二次作废
     [_drawView addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -69,9 +69,12 @@
 
 
 
+// 一次作废
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"cell touchBegan");
+   // [super touchesBegan:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -81,6 +84,7 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"cell touchesEnded");
+  //  [super touchesEnded:touches withEvent:event];
 }
 
 @end

@@ -116,6 +116,7 @@
 // 该方法，作废
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewController: [UIViewController new] animated: YES];
 }
