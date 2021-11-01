@@ -40,7 +40,6 @@
     spaceXStart += cellData.logoObj.frame.size.width;
     
     // 商家图片右上角 icon
-    // 商家图片右上角 icon
     WMPoiListAttributedImage *logoIcon = [[WMPoiListAttributedImage alloc] initWithText:nil];
     [logoIcon fixed_appendImageWithUrl:poi.restaurantIcon size:CGSizeMake(26, 14) placeholder: poi.restaurantIconPlaceholder];
     
