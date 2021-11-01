@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param controlEvents 事件类型
  *
  */
-- (void)addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
+- (void)__addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
 /**
  *  给一个文本组件添加点击回调

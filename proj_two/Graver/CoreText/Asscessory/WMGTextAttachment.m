@@ -77,7 +77,7 @@ NSString * const WMGTextAttachmentReplacementCharacter = @"\uFFFC";
 
 #pragma mark - Event
 
-- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
+- (void)__addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
 {
     _target = target;
     _selector = action;

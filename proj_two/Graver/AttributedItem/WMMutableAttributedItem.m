@@ -443,7 +443,7 @@
         [self.arrayAttachments enumerateObjectsUsingBlock:^(WMGTextAttachment * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if (priority <= obj.eventPriority) {
                 obj.eventPriority = priority;
-                [obj addTarget:target action:action forControlEvents:controlEvents];
+                [obj __addTarget:target action:action forControlEvents:controlEvents];
             }
         }];
     }

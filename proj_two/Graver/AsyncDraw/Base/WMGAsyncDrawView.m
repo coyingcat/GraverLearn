@@ -114,6 +114,9 @@ static BOOL _globalAsyncDrawDisabled = NO;
     return _drawingLayer.drawingCount;
 }
 
+
+
+// 渲染队列
 - (dispatch_queue_t)drawQueue
 {
     if (self.dispatchDrawQueue)
