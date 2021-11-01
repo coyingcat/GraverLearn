@@ -12,9 +12,17 @@
 #import "WMGBaseCellData.h"
 #import "DemoOrderModel.h"
 #import "DemoOrderListEngine.h"
+
+
+#import "YYFPSLabel.h"
+
+
 @interface DemoOrderListViewController ()
 @property (nonatomic, strong) UITableView * tableview;
 @property (nonatomic, strong) WMGBaseViewModel *viewModel;
+
+@property (nonatomic, strong) YYFPSLabel * label;
+
 @end
 
 @implementation DemoOrderListViewController
@@ -35,6 +43,8 @@
             [weakSelf.tableview reloadData];
         }
     }];
+    
+    [self fpsDo];
 }
 
 - (UITableView *)tableview
@@ -99,6 +109,16 @@
 
 - (void)buttonDidClick_xy:(NSString *)title {
     NSLog(@"buttonDidClick_xy  点击了按钮: %@",title);
+}
+
+
+
+
+- (void)fpsDo{
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    CGFloat edge = 60;
+    self.label = [[YYFPSLabel alloc] initWithFrame: CGRectMake(edge, 20 + 160 , bounds.size.width - edge * 2, 80)];
+    [self.view addSubview: self.label];
 }
 
 @end

@@ -337,7 +337,7 @@
 - (void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
     //  UIApplication， 分发事件
-    
+    NSLog(@"aa  aa aa __  b bb bb");
     [[UIApplication sharedApplication] sendAction:action to:target from:self forEvent:event];
 }
 
