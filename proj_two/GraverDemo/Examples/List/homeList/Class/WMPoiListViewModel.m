@@ -47,6 +47,9 @@
     [logoIcon fixed_appendImageWithUrl:poi.restaurantIcon size:CGSizeMake(26, 14) placeholder: poi.restaurantIconPlaceholder];
     
     size = [logoIcon.resultString wmg_size];
+    
+    
+    // 设置 frame
     cellData.logoIconObj.frame = CGRectMake(spaceXStart - size.width, spaceYStart - 1, size.width, size.height);
     cellData.logoIconObj.value = logoIcon;
     spaceXStart += 8;

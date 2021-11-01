@@ -44,9 +44,6 @@
     }
 }
 
-- (void)loadMoreDataWithParams:(NSDictionary *)params completion:(WMGEngineLoadCompletion)completion
-{
-    
-}
+
 
 @end
