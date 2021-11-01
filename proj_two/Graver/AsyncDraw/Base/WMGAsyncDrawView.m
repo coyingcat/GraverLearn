@@ -205,7 +205,7 @@ static BOOL _globalAsyncDrawDisabled = NO;
 {
     [self drawingWillStartAsynchronously:NO];
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
+    NSLog(@"  666  666 ");
     if (!context) {
         WMGLog(@"may be memory warning");
     }

@@ -29,5 +29,12 @@ class CustomView: UIView {
     }
      
      
-
+    override func display(_ layer: CALayer) {
+        
+        
+        print(" 666 666 ")
+        
+        // super.display(layer)
+    }
+      
 }
