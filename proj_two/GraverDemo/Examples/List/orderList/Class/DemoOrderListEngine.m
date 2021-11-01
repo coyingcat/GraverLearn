@@ -24,6 +24,7 @@
     NSMutableArray * array = [NSMutableArray array];
     [arr enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         DemoOrderModel *model = [[DemoOrderModel alloc] initWithDictionary:obj];
+        model.poiPicPlaceHolder = @"icon_logo";
         [array addObject:model];
     }];
     

@@ -21,7 +21,7 @@
     
     //商家icon
     WMMutableAttributedItem * poiImageAttributedItem = [WMMutableAttributedItem itemWithText:nil];
-    WMMutableAttributedItem * imageAttibutedItem = [poiImageAttributedItem appendImageWithUrl:item.poiPic size:CGSizeMake(35, 35)];
+    WMMutableAttributedItem * imageAttibutedItem = [poiImageAttributedItem appendImageWithUrl:item.poiPic size: CGSizeMake(35, 35) placeholder: item.poiPicPlaceHolder];
     WMGTextAttachment * imageAttachment = imageAttibutedItem.arrayAttachments[0];
     imageAttachment.baselineFontMetrics = WMGFontMetricsMakeWithTargetLineHeight(WMGFontMetricsMakeFromUIFont([UIFont systemFontOfSize:11]), floor(imageAttachment.size.height));
     

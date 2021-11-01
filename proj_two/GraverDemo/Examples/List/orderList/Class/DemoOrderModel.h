@@ -33,6 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DemoOrderModel : WMGBusinessModel
 
 @property (nonatomic, copy) NSString * poiPic;
+
+@property (nonatomic, copy) NSString * poiPicPlaceHolder;
+
+
 @property (nonatomic, copy) NSString * poiName;
 @property (nonatomic, copy) NSString * statusDescription;
 @property (nonatomic, copy) NSString * totalPrice;
