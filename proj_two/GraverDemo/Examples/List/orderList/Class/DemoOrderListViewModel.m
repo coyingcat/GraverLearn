@@ -127,8 +127,12 @@
         [buttonListAttributedItem appendWhiteSpaceWithWidth:10];
         
         [buttonAttributedItem setUserInfo:buttonInfo.title];
-        [buttonAttributedItem addTargetX:self.owner action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+     
+        NSLog(@"aa  aa aa ");
     }
+    
+    NSLog(@"b bb bb ");
+    
     [buttonListAttributedItem setUserInfo:@"按钮空白" priority:1];
     [buttonListAttributedItem addTargetY:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside priority:1];
     CGSize buttonListSize = [buttonListAttributedItem.resultString wmg_size];
@@ -151,8 +155,6 @@
 
 
 - (void)buttonDidClick:(id)userInfo {
-    
-    
     if ([self.owner respondsToSelector:@selector(buttonDidClick_xy:)]){
         
         NSLog(@"buttonDidClick_xy  _ _ _   before");
