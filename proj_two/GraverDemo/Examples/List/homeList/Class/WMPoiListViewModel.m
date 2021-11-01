@@ -22,14 +22,12 @@
     cellData.showAllTag = poi.showAlltag;
     
     // 游标设置
-    CGFloat spaceXStart = 0;
-    CGFloat spaceYStart = 0;
     CGFloat marginH = 16;
     CGFloat marginV = 5;
     CGFloat spaceXEnd = cellData.cellWidth - marginH;
     
-    spaceXStart = marginH;
-    spaceYStart = marginV;
+    CGFloat spaceXStart = marginH;
+    CGFloat spaceYStart = marginV;
     
     // 商家图片
     WMPoiListAttributedImage *logo = [[WMPoiListAttributedImage alloc] initWithText:nil];
