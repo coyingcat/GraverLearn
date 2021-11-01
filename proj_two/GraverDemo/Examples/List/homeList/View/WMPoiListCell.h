@@ -10,12 +10,6 @@
 #import "WMPoiListCellData.h"
 #import <WMGBaseCell.h>
 
-@protocol tagClickDelegate <NSObject>
-
-- (void)tagDidClickInCell:(WMGBaseCell *)cell;
-
-@end
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WMPoiListCell : WMGBaseCell
