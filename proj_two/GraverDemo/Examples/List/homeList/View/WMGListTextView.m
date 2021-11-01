@@ -295,6 +295,17 @@
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     return NO;
+    
+    
+    // 如果返回 YES,
+    
+     /*
+     
+                              - (void)test{
+                                  NSLog(@"view 点击了");
+                              }
+     
+       */
 }
 
 #pragma mark - WMGTextLayoutDelegate
