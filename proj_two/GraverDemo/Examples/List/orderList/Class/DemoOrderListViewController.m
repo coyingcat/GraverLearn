@@ -90,15 +90,15 @@
     WMGBaseCellData *cellData = [_viewModel.arrayLayouts objectAtIndex:indexPath.row];
     DemoOrderModel *model = (DemoOrderModel *)cellData.metaData;
     model.poiName = @"xxx";
-    
+    NSLog(@" __-  -__");
     [model setNeedsUpdateUIData];
     
     [_viewModel refreshModelWithResultSet:_viewModel.engine.resultSet];
     [_tableview reloadData];
 }
 
-- (void)buttonDidClick:(NSString *)title {
-    NSLog(@"点击了按钮: %@",title);
+- (void)buttonDidClick_xy:(NSString *)title {
+    NSLog(@"buttonDidClick_xy  点击了按钮: %@",title);
 }
 
 @end

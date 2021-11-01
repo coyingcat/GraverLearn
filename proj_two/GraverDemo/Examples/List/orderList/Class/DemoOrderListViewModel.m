@@ -143,9 +143,20 @@
     return cellData;
 }
 
+
+
+
+
+
+
+
 - (void)buttonDidClick:(id)userInfo {
-    if ([self.owner respondsToSelector:@selector(buttonDidClick:)]) {
-        [self.owner performSelector:@selector(buttonDidClick:) withObject:userInfo];
+    
+    
+    if ([self.owner respondsToSelector:@selector(buttonDidClick_xy:)]){
+        
+        NSLog(@"buttonDidClick_xy  _ _ _   before");
+        [self.owner performSelector:@selector(buttonDidClick_xy:) withObject:userInfo];
     }
 }
 
