@@ -184,12 +184,6 @@ extern NSString * const WMGTextAttachmentAttributeName;
         lineOrigin.y -= drawingOrigin.y;
         lineOrigin.x += drawingOrigin.x;
         
-        //        CGRect glyphBounds = CTLineGetImageBounds(lineRef, ctx);
-        //        CGFloat glyphHeight = ceil(CGRectGetHeight(glyphBounds));
-        //        CGFloat lineHeight = WMGFontMetricsGetLineHeight(line.fontMetrics);
-        //
-        //        lineOrigin.y -= (lineHeight - glyphHeight) / 2;
-        
         CGContextSetTextPosition(ctx, lineOrigin.x, lineOrigin.y);
         CTLineDraw(lineRef, ctx);
         
