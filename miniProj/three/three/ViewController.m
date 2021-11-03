@@ -28,8 +28,13 @@
     
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        // 子线程的 runloop , 默认没有开启
         [[NSRunLoop currentRunLoop] run];
         NSLog(@"11");
+        
+        // Run Loop 当中，注册了一个 timer
+        // 运行循环，到来的时候，执行这个 timer
         [self performSelector: @selector(haha) withObject: nil afterDelay: 0];
         NSLog(@"33");
     });
