@@ -20,12 +20,24 @@
 
 
 
+// run loop 学习
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [super touchesBegan: touches withEvent: event];
     
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"11");
+        [self performSelector: @selector(haha) withObject: nil afterDelay: 0];
+        NSLog(@"33");
+    });
     
+}
+
+
+- (void)haha{
+    NSLog(@"22");
 }
 
 
