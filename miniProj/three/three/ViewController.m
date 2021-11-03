@@ -27,12 +27,25 @@
     [super touchesBegan: touches withEvent: event];
     
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[NSRunLoop currentRunLoop] run];
         NSLog(@"11");
         [self performSelector: @selector(haha) withObject: nil afterDelay: 0];
         NSLog(@"33");
     });
     
+}
+
+
+
+
+- (void)missionOne{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"11");
+        [self performSelector: @selector(haha) withObject: nil afterDelay: 0];
+        NSLog(@"33");
+    });
 }
 
 
